@@ -1,6 +1,5 @@
 package com.example.businesscard
 
-import android.graphics.drawable.Icon
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -21,7 +20,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
@@ -49,8 +47,12 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+
+/*
+    LAYOUT
+ */
 @Composable
-fun ComposeMainActivity( modifier: Modifier = Modifier) {
+fun ComposeMainActivity(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .fillMaxHeight()
@@ -71,7 +73,7 @@ fun ComposeMainActivity( modifier: Modifier = Modifier) {
     }
 }
 
-
+// Build the person layout block
 @Composable
 fun Person(name: String, occupation: String, modifier: Modifier) {
     Column(
@@ -103,6 +105,7 @@ fun Person(name: String, occupation: String, modifier: Modifier) {
     }
 }
 
+// Build the contacts layout block
 @Composable
 fun Contacts(cellphone: String, user: String, email: String, modifier: Modifier) {
     Column(
@@ -115,34 +118,37 @@ fun Contacts(cellphone: String, user: String, email: String, modifier: Modifier)
         ContactEntry(
             icon = painterResource(id = R.drawable.ic_phone),
             iconDescription = stringResource(R.string.content_description_cellphone),
-            text = cellphone,
-            modifier = modifier
+            text = cellphone
         )
         ContactEntry(
             icon = painterResource(id = R.drawable.ic_share),
             iconDescription = stringResource(R.string.content_description_username),
-            text = user,
-            modifier = modifier
+            text = user
         )
         ContactEntry(
             icon = painterResource(id = R.drawable.ic_email),
             iconDescription = stringResource(R.string.content_description_email),
-            text = email,
-            modifier = modifier
+            text = email
         )
     }
 }
 
+// In the contacts layout block, build the entry layout
 @Composable
-fun ContactEntry(icon: Painter, iconDescription: String, text: String, modifier: Modifier) {
+fun ContactEntry(
+    icon: Painter,
+    iconDescription: String,
+    text: String,
+    modifier: Modifier = Modifier
+) {
     Row(
-        modifier = Modifier.padding(start = 32.dp, top = 16.dp),
+        modifier = modifier.padding(start = 32.dp, top = 16.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Icon(
             painter = icon,
             contentDescription = iconDescription,
-            modifier = Modifier.padding(end = 8.dp),
+            modifier = modifier.padding(end = 8.dp),
             tint = colorResource(id = R.color.teal_200)
         )
         Text(text = text, color = colorResource(id = R.color.white))
@@ -152,7 +158,7 @@ fun ContactEntry(icon: Painter, iconDescription: String, text: String, modifier:
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun ComposeMainActivityPreview() {
     BusinessCardTheme {
         ComposeMainActivity()
     }
