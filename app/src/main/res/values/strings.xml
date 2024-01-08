@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BusinessCard</string>
+    <string name="name">Paolo Caldera</string>
+    <string name="occupation">Android Engineer</string>
+    <string name="cellphone">+39 3338437076</string>
+    <string name="user">\@paulderass</string>
+    <string name="email">paolo.caldera@outlook.com</string>
+    <string name="content_description_android_logo">Android Logo</string>
+    <string name="content_description_cellphone">Cellphone</string>
+    <string name="content_description_username">Social Username</string>
+    <string name="content_description_email">Email</string>
+</resources>
