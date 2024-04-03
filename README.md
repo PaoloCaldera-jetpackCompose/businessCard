@@ -8,14 +8,14 @@ The project demonstrates the ability to exploit the basic elements of Jetpack Co
 
 The project consists of just one screen whose layout is developed through Jetpack Compose.
 
-Visit the [Wiki](https://github.com/PaoloCaldera-jetpackCompose/businessCard/wiki) to see the application screen.
+Visit the [Wiki](https://github.com/PaoloCaldera/businessCard/wiki) to see the application screen.
 
 
 ## Getting Started
 
 To clone the repository, use the command
 ```
-$ git clone https://github.com/PaoloCaldera-jetpackCompose/businessCard.git
+$ git clone https://github.com/PaoloCaldera/businessCard.git
 ```
 or the `Get from VCS` option inside Android Studio by copying the link above.
 
